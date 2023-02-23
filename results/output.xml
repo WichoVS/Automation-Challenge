@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on linux)" generated="20230223 15:33:49.792" rpa="false" schemaversion="3">
+<suite id="s1" name="Verizon Shop Automation Challenge" source="/home/wicho/Documents/Projects/Python/Verizon Shop Automation Challenge">
+<suite id="s1-s1" name="Tests" source="/home/wicho/Documents/Projects/Python/Verizon Shop Automation Challenge/tests">
+<suite id="s1-s1-s1" name="2 Testcase" source="/home/wicho/Documents/Projects/Python/Verizon Shop Automation Challenge/tests/2_Testcase.robot">
+<test id="s1-s1-s1-t1" name="Buy a Smartphone with a new customer" line="13">
+<kw name="Enter to Verizon Shop Web">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230223 15:33:49.889" level="INFO">Opening browser 'Chrome' to base url 'https://www.verizon.com/smartphones/'.</msg>
+<status status="PASS" starttime="20230223 15:33:49.888" endtime="20230223 15:33:58.379"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[4]/div/div[4]/section[1]/div[3]/div/div[1]/div[2]/div/div[1]/div</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230223 15:33:58.379" endtime="20230223 15:33:58.387"/>
+</kw>
+<status status="PASS" starttime="20230223 15:33:49.888" endtime="20230223 15:33:58.388"/>
+</kw>
+<kw name="Select a smartphone to buy">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[4]/div/div[4]/section[1]/div[3]/div/div[1]/div[2]/div/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230223 15:33:58.389" level="INFO">Clicking element 'xpath=/html/body/div[4]/div/div[4]/section[1]/div[3]/div/div[1]/div[2]/div/div[1]/div'.</msg>
+<status status="PASS" starttime="20230223 15:33:58.388" endtime="20230223 15:33:58.922"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id=cta-btn</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20230223 15:33:59.546" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=110.0.5481.177)
+Stacktrace:
+#0 0x55fb7b875d93 &lt;unknown&gt;
+#1 0x55fb7b6442d7 &lt;unknown&gt;
+#2 0x55fb7b62da63 &lt;unknown&gt;
+#3 0x55fb7b62d903 &lt;unknown&gt;
+#4 0x55fb7b645ac2 &lt;unknown&gt;
+#5 0x55fb7b6bc0d5 &lt;unknown&gt;
+#6 0x55fb7b6a4353 &lt;unknown&gt;
+#7 0x55fb7b673e40 &lt;unknown&gt;
+#8 0x55fb7b675038 &lt;unknown&gt;
+#9 0x55fb7b8c98be &lt;unknown&gt;
+#10 0x55fb7b8cd8f0 &lt;unknown&gt;
+#11 0x55fb7b8adf90 &lt;unknown&gt;
+#12 0x55fb7b8ceb7d &lt;unknown&gt;
+#13 0x55fb7b89f578 &lt;unknown&gt;
+#14 0x55fb7b8f3348 &lt;unknown&gt;
+#15 0x55fb7b8f34d6 &lt;unknown&gt;
+#16 0x55fb7b90d341 &lt;unknown&gt;
+#17 0x7faf98c94b43 &lt;unknown&gt;
+</msg>
+<msg timestamp="20230223 15:33:59.549" level="FAIL">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=110.0.5481.177)
+Stacktrace:
+#0 0x55fb7b875d93 &lt;unknown&gt;
+#1 0x55fb7b6442d7 &lt;unknown&gt;
+#2 0x55fb7b62da63 &lt;unknown&gt;
+#3 0x55fb7b62d903 &lt;unknown&gt;
+#4 0x55fb7b645ac2 &lt;unknown&gt;
+#5 0x55fb7b6bc0d5 &lt;unknown&gt;
+#6 0x55fb7b6a4353 &lt;unknown&gt;
+#7 0x55fb7b673e40 &lt;unknown&gt;
+#8 0x55fb7b675038 &lt;unknown&gt;
+#9 0x55fb7b8c98be &lt;unknown&gt;
+#10 0x55fb7b8cd8f0 &lt;unknown&gt;
+#11 0x55fb7b8adf90 &lt;unknown&gt;
+#12 0x55fb7b8ceb7d &lt;unknown&gt;
+#13 0x55fb7b89f578 &lt;unknown&gt;
+#14 0x55fb7b8f3348 &lt;unknown&gt;
+#15 0x55fb7b8f34d6 &lt;unknown&gt;
+#16 0x55fb7b90d341 &lt;unknown&gt;
+#17 0x7faf98c94b43 &lt;unknown&gt;
+</msg>
+<status status="FAIL" starttime="20230223 15:33:58.922" endtime="20230223 15:33:59.553"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>id=cta-btn</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20230223 15:33:59.555" endtime="20230223 15:33:59.557"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="cta-btn"]/div[1]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230223 15:33:59.557" endtime="20230223 15:33:59.558"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="flow-overlay"]/div[3]/div/div/div</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20230223 15:33:59.558" endtime="20230223 15:33:59.558"/>
+</kw>
+<status status="FAIL" starttime="20230223 15:33:58.388" endtime="20230223 15:33:59.559"/>
+</kw>
+<kw name="Purchase as Existing Customer">
+<status status="NOT RUN" starttime="20230223 15:33:59.559" endtime="20230223 15:33:59.560"/>
+</kw>
+<status status="FAIL" starttime="20230223 15:33:49.888" endtime="20230223 15:33:59.560">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=110.0.5481.177)
+Stacktrace:
+#0 0x55fb7b875d93 &lt;unknown&gt;
+#1 0x55fb7b6442d7 &lt;unknown&gt;
+#2 0x55fb7b62da63 &lt;unknown&gt;
+#3 0x55fb7b62d903 &lt;unknown&gt;
+#4 0x55fb7b645ac2 &lt;unknown&gt;
+#5 0x55fb7b6bc0d5 &lt;unknown&gt;
+#6 0x55fb7b6a4353 &lt;unknown&gt;
+#7 0x55fb7b673e40 &lt;unknown&gt;
+#8 0x55fb7b675038 &lt;unknown&gt;
+#9 0x55fb7b8c98be &lt;unknown&gt;
+#10 0x55fb7b8cd8f0 &lt;unknown&gt;
+#11 0x55fb7b8adf90 &lt;unknown&gt;
+#12 0x55fb7b8ceb7d &lt;unknown&gt;
+#13 0x55fb7b89f578 &lt;unknown&gt;
+#14 0x55fb7b8f3348 &lt;unknown&gt;
+#15 0x55fb7b8f34d6 &lt;unknown&gt;
+#16 0x55fb7b90d341 &lt;unknown&gt;
+#17 0x7faf98c94b43 &lt;unknown&gt;
+</status>
+</test>
+<status status="FAIL" starttime="20230223 15:33:49.805" endtime="20230223 15:33:59.561"/>
+</suite>
+<status status="FAIL" starttime="20230223 15:33:49.804" endtime="20230223 15:33:59.562"/>
+</suite>
+<status status="FAIL" starttime="20230223 15:33:49.793" endtime="20230223 15:33:59.563"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Verizon Shop Automation Challenge">Verizon Shop Automation Challenge</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Verizon Shop Automation Challenge.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="2 Testcase">Verizon Shop Automation Challenge.Tests.2 Testcase</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230223 15:33:59.546" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=110.0.5481.177)
+Stacktrace:
+#0 0x55fb7b875d93 &lt;unknown&gt;
+#1 0x55fb7b6442d7 &lt;unknown&gt;
+#2 0x55fb7b62da63 &lt;unknown&gt;
+#3 0x55fb7b62d903 &lt;unknown&gt;
+#4 0x55fb7b645ac2 &lt;unknown&gt;
+#5 0x55fb7b6bc0d5 &lt;unknown&gt;
+#6 0x55fb7b6a4353 &lt;unknown&gt;
+#7 0x55fb7b673e40 &lt;unknown&gt;
+#8 0x55fb7b675038 &lt;unknown&gt;
+#9 0x55fb7b8c98be &lt;unknown&gt;
+#10 0x55fb7b8cd8f0 &lt;unknown&gt;
+#11 0x55fb7b8adf90 &lt;unknown&gt;
+#12 0x55fb7b8ceb7d &lt;unknown&gt;
+#13 0x55fb7b89f578 &lt;unknown&gt;
+#14 0x55fb7b8f3348 &lt;unknown&gt;
+#15 0x55fb7b8f34d6 &lt;unknown&gt;
+#16 0x55fb7b90d341 &lt;unknown&gt;
+#17 0x7faf98c94b43 &lt;unknown&gt;
+</msg>
+</errors>
+</robot>
