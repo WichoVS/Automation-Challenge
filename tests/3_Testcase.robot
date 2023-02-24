@@ -13,7 +13,7 @@ ${isValid}    False
 ${StringToList}
 
 *** Test Cases ***
-Buy a Smartphone with a new customer
+Verify Mobile plans data is correct
     Enter to Verizon Shop Web
 
 *** Keywords ***
@@ -58,6 +58,5 @@ Go To Plans Component And Validate
     Append To List    ${4L_Plans}    ${PlanValue}
     ${PlanValue}    Get Text    xpath=/html/body/div[1]/div/main/div/div[3]/div/div/div/div/div[5]/section/div/div/div/div/div/div/div[2]/div/div/div[1]/div[1]/div/section/div/div[3]/div/div/div[4]/div[1]/p[3]/span[1]/strong/span[5]
     Append To List    ${4L_Plans}    ${PlanValue}
-    Log    ${1L_Plans}
     ${isValid}    Validar Valores    ${1L_Plans}    ${4L_Plans}
     Should Be True    ${isValid}
