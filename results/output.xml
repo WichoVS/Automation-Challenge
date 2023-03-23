@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230322 23:07:57.102" rpa="false" schemaversion="3">
+<suite id="s1" name="Automation-Challenge" source="d:\Proyectos\Automation-Challenge">
+<suite id="s1-s1" name="Workflows" source="d:\Proyectos\Automation-Challenge\workflows">
+<suite id="s1-s1-s1" name="Form" source="d:\Proyectos\Automation-Challenge\workflows\form">
+<suite id="s1-s1-s1-s1" name="Formulario" source="d:\Proyectos\Automation-Challenge\workflows\form\formulario.robot">
+<test id="s1-s1-s1-s1-t1" name="Open Browser in Form" line="7">
+<kw name="Open Browser in Form" library="open_browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230322 23:07:57.303" level="INFO">Opening browser 'Chrome' to base url 'https://docs.google.com/forms/d/e/1FAIpQLScYohtnRbT8w-LZfsU_-NWkvr3VsGqShI9Elnf76O1bXqN_0g/viewform'.</msg>
+<status status="PASS" starttime="20230322 23:07:57.302" endtime="20230322 23:07:59.045"/>
+</kw>
+<kw name="Validate Form Is Visible" library="open_browser">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${XPATH_FORM_LOADED}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230322 23:07:59.046" endtime="20230322 23:07:59.058"/>
+</kw>
+<status status="PASS" starttime="20230322 23:07:59.045" endtime="20230322 23:07:59.058"/>
+</kw>
+<status status="PASS" starttime="20230322 23:07:57.301" endtime="20230322 23:07:59.058"/>
+</kw>
+<kw name="Fill Date" library="form_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${XPATH_INPUT_DATE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230322 23:07:59.062" level="INFO">Clicking element '//html/body/div/div[2]/form/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div/div[2]/div[1]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230322 23:07:59.061" endtime="20230322 23:07:59.206"/>
+</kw>
+<kw name="Get Birthdate" library="get_birthdate">
+<var>${birthdate}</var>
+<msg timestamp="20230322 23:07:59.207" level="INFO">${birthdate} = 15041999</msg>
+<status status="PASS" starttime="20230322 23:07:59.207" endtime="20230322 23:07:59.208"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${XPATH_INPUT_DATE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230322 23:07:59.209" level="INFO">Clicking element '//html/body/div/div[2]/form/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div/div[2]/div[1]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230322 23:07:59.208" endtime="20230322 23:07:59.249"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>LEFT</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230322 23:07:59.249" level="INFO">Sending key(s) ('LEFT',) to page.</msg>
+<msg timestamp="20230322 23:07:59.250" level="INFO">Pressing special key LEFT to browser.</msg>
+<msg timestamp="20230322 23:07:59.250" level="INFO">Releasing special key LEFT.</msg>
+<status status="PASS" starttime="20230322 23:07:59.249" endtime="20230322 23:07:59.259"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>LEFT</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230322 23:07:59.260" level="INFO">Sending key(s) ('LEFT',) to page.</msg>
+<msg timestamp="20230322 23:07:59.261" level="INFO">Pressing special key LEFT to browser.</msg>
+<msg timestamp="20230322 23:07:59.261" level="INFO">Releasing special key LEFT.</msg>
+<status status="PASS" starttime="20230322 23:07:59.259" endtime="20230322 23:07:59.267"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${birthdate}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230322 23:07:59.269" level="INFO">Sending key(s) ('15041999',) to page.</msg>
+<msg timestamp="20230322 23:07:59.270" level="INFO">Sending keys 15041999</msg>
+<status status="PASS" starttime="20230322 23:07:59.267" endtime="20230322 23:07:59.308"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230322 23:08:00.309" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230322 23:07:59.308" endtime="20230322 23:08:00.309"/>
+</kw>
+<status status="PASS" starttime="20230322 23:07:59.058" endtime="20230322 23:08:00.310"/>
+</kw>
+<kw name="Fill Question One" library="form_page">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${XPATH_QUESTION_ONE}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230322 23:08:00.311" endtime="20230322 23:08:00.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${XPATH_Q1_OPT1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230322 23:08:00.590" level="INFO">Clicking element '//html/body/div/div[2]/form/div[2]/div/div[2]/div[2]/div/div/div[2]/div/div/span/div/div[1]'.</msg>
+<status status="PASS" starttime="20230322 23:08:00.590" endtime="20230322 23:08:00.625"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230322 23:08:01.625" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230322 23:08:00.625" endtime="20230322 23:08:01.625"/>
+</kw>
+<status status="PASS" starttime="20230322 23:08:00.310" endtime="20230322 23:08:01.626"/>
+</kw>
+<status status="PASS" starttime="20230322 23:07:57.300" endtime="20230322 23:08:01.627"/>
+</test>
+<status status="PASS" starttime="20230322 23:07:57.132" endtime="20230322 23:08:01.628"/>
+</suite>
+<status status="PASS" starttime="20230322 23:07:57.130" endtime="20230322 23:08:01.630"/>
+</suite>
+<status status="PASS" starttime="20230322 23:07:57.127" endtime="20230322 23:08:01.632"/>
+</suite>
+<status status="PASS" starttime="20230322 23:07:57.107" endtime="20230322 23:08:01.633"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automation-Challenge">Automation-Challenge</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Workflows">Automation-Challenge.Workflows</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Form">Automation-Challenge.Workflows.Form</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Formulario">Automation-Challenge.Workflows.Form.Formulario</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
